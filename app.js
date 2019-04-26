@@ -1,7 +1,9 @@
 require('dotenv').config()
 const express = require('express')
 const session = require('express-session')
+const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
+const path = require('path')
 
 const {
   PORT,
@@ -15,7 +17,8 @@ const app = express()
 
 const IN_PROD = NODE_ENV === 'production'
 // middleware
-app.set('view engine', 'hbs')
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+app.set('view engine', 'handlebars')
 app.use(bodyParser.json())
 app.use(
   bodyParser.urlencoded({
