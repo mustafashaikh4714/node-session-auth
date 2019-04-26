@@ -36,6 +36,7 @@ app.use(
   })
 )
 
+require('events').EventEmitter.defaultMaxListeners = 15
 require('./routes/index')(app)
 
 app.listen(PORT, () => {
