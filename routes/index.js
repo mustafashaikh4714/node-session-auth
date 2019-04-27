@@ -30,7 +30,7 @@ module.exports = app => {
       )
       if (user) {
         req.session.userId = user.id
-        return res.redirect('/home', user)
+        return res.render('/home', user)
       }
       return res.redirect('/login')
     }
