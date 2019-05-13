@@ -1,7 +1,10 @@
-<h1>Home</h1>
-
-<ul>
-  <li>Name: {{ user.name }}</li>
-  <li>Email:{{ user.email }}</li>
-</ul>
-<a href="/logout">Logout</a>
+<div class="container">
+  <h1 class="container__title">Home</h1>
+  <div class="container__main">
+    <ul>
+      <li>Name: {{ user.name }}</li>
+      <li>Email:{{ user.email }}</li>
+    </ul>
+    <div class="logout"><a href="/logout">Logout</a></div>
+  </div>
+</div>

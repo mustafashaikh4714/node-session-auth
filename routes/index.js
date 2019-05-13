@@ -5,9 +5,10 @@ module.exports = app => {
     { userId: 2, name: 'sam', email: 'sam@gmail.com', password: '13345tc' },
     { userId: 3, name: 'alex', email: 'alex@gmail.com', password: '22345tc' }
   ]
+
   app.get('/', (req, res) => {
     let { userId } = req.session
-    res.render('main', userId)
+    res.render('index', userId)
   })
 
   app.get('/home', redirectToLogin, (req, res) => {
@@ -15,7 +16,7 @@ module.exports = app => {
   })
 
   app.get('/login', redirectToHome, (req, res) => {
-    res.render('login')
+    res.render('login', { layout: false })
   })
 
   app.get('/register', redirectToHome, (req, res) => {
@@ -29,8 +30,8 @@ module.exports = app => {
         user => user.email === email && user.password === password
       )
       if (user) {
-        req.session.userId = user.id
-        return res.render('/home', user)
+        req.session.userId = user.userId
+        return res.render('home', { user })
       }
       return res.redirect('/login')
     }
@@ -44,26 +45,26 @@ module.exports = app => {
       if (!exists) {
         // register new user to database
         const user = {
-          id: users.length + 1,
+          userId: users.length + 1,
           name,
           email,
           password
         }
 
         users.push(user)
-        req.session.userId = user.id
+        req.session.userId = user.userId
         return res.redirect('/home')
       }
 
       return res.redirect('/register')
     }
   })
-  app.post('/logout', redirectToLogin, (req, res) => {
+  app.get('/logout', redirectToLogin, (req, res) => {
     req.session.destroy(err => {
       if (err) res.redirect('/home')
 
       res.clearCookie(process.env.SESSION_NAME)
-      res, redirect('/login')
+      res.redirect('/login')
     })
   })
 }

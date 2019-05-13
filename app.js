@@ -19,6 +19,8 @@ const IN_PROD = NODE_ENV === 'production'
 // middleware
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
+// app.set('views', './routes')
+
 app.use(bodyParser.json())
 app.use(
   bodyParser.urlencoded({
