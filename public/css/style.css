@@ -16,25 +16,32 @@ body {
   line-height: 1.7;
   color: #ddd; }
 
-.index {
-  background-color: #336b87;
+.home {
   text-align: center; }
-  .index__title {
-    display: inline-block;
+  .home__heading {
+    background-color: #336b87;
+    display: block;
     color: white;
     padding: 1.5rem; }
-  .index__main {
-    display: inline-block; }
-  .index__sub {
-    display: inline-block;
-    float: right;
-    padding: 2.2rem; }
-    .index__sub--btn a {
-      color: white;
-      padding: 1rem;
+    .home__heading a {
       text-decoration: none;
-      font-size: 1.4rem;
-      letter-spacing: 0.2rem; }
+      font-size: 1.3rem;
+      color: white;
+      float: right;
+      margin-top: 0.8rem;
+      margin-left: 2rem; }
+  .home__main {
+    display: inline-block; }
+    .home__main ul {
+      margin-top: 2rem;
+      list-style-type: none;
+      display: block; }
+      .home__main ul li {
+        color: #336b87;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.6;
+        padding: 0.5rem; }
 
 .login {
   margin: 10rem auto;

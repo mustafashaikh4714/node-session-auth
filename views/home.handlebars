@@ -1,10 +1,12 @@
-<div class="container">
-  <h1 class="container__heading">Home</h1>
-  <div class="container__main">
+<div class="home">
+  <h1 class="home__heading">Dashboard
+    <span class="logout"><a href="/logout">Logout</a></span>
+  </h1>
+
+  <div class="home__main">
     <ul>
       <li>Name: {{ user.name }}</li>
       <li>Email:{{ user.email }}</li>
     </ul>
-    <span class="logout"><a href="/logout">Logout</a></span>
   </div>
 </div>
