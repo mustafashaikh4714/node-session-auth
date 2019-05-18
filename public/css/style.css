@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+
+body {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #ddd; }
+
+.index {
+  background-color: #336b87;
+  text-align: center; }
+  .index__title {
+    display: inline-block;
+    color: white;
+    padding: 1.5rem; }
+  .index__main {
+    display: inline-block; }
+  .index__sub {
+    display: inline-block;
+    float: right;
+    padding: 2.2rem; }
+    .index__sub--btn a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      font-size: 1.4rem;
+      letter-spacing: 0.2rem; }

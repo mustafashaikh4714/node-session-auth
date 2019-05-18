@@ -1,7 +1,9 @@
-<h1>Login</h1>
-<form action="/login" method="post">
-  <input type="text" placeholder="email" name="email">
-  <input type="text" placeholder="password" name="password">
-  <input type="submit" />
-</form>
-<a href="/register">Register</a>
+<div class="login">
+  <h1 class="login__heading">Login</h1>
+  <form action="/login" method="post" class="login__main">
+    <input type="text" placeholder="email" name="email" class="login__main--email">
+    <input type="text" placeholder="password" name="password" class="login__main--password">
+    <input type="submit" class="login__main--submit" />
+    <a href="/register" class="login__main--register">Register</a>
+  </form>
+</div>

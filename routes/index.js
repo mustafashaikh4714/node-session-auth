@@ -16,7 +16,7 @@ module.exports = app => {
   })
 
   app.get('/login', redirectToHome, (req, res) => {
-    res.render('login', { layout: false })
+    res.render('login')
   })
 
   app.get('/register', redirectToHome, (req, res) => {

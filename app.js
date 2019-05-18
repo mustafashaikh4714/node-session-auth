@@ -15,9 +15,16 @@ const {
 
 const app = express()
 
+app.use(express.static('public'))
+
 const IN_PROD = NODE_ENV === 'production'
 // middleware
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+app.engine(
+  'handlebars',
+  exphbs({
+    defaultLayout: 'main'
+  })
+)
 app.set('view engine', 'handlebars')
 // app.set('views', './routes')
 
