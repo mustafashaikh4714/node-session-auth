@@ -35,3 +35,57 @@ body {
       text-decoration: none;
       font-size: 1.4rem;
       letter-spacing: 0.2rem; }
+
+.login {
+  margin: 10rem auto;
+  background-color: #336b87;
+  width: 40rem;
+  height: 35rem;
+  display: flex;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  align-items: center; }
+  .login__heading {
+    padding: 1.5rem; }
+  .login__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .login__main input {
+      margin: 1rem;
+      padding: 1rem;
+      width: 135%;
+      border: none;
+      border-radius: 0.2rem;
+      font-size: 1.4rem; }
+    .login__main a {
+      font-size: 1.4rem;
+      color: white;
+      margin-top: 1rem; }
+
+.register {
+  margin: 10rem auto;
+  background-color: #336b87;
+  width: 40rem;
+  height: 35rem;
+  display: flex;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  align-items: center; }
+  .register__heading {
+    padding: 1.5rem; }
+  .register__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .register__main input {
+      margin: 1rem;
+      padding: 1rem;
+      width: 135%;
+      border: none;
+      border-radius: 0.2rem;
+      font-size: 1.4rem; }
+    .register__main a {
+      font-size: 1.4rem;
+      color: white;
+      margin-top: 1rem; }
